@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.danlz.spring.boot.lyo</groupId>
+	<artifactId>lyo-in-spring-boot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>lyo-in-spring-boot</name>
+	<description>Lyo integration with Spring Boot</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<lyo.version>6.0.0-SNAPSHOT</lyo.version>
+		<swagger.version>2.2.21</swagger.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.lyo.oslc4j.core</groupId>
+			<artifactId>oslc4j-core</artifactId>
+			<version>${lyo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.lyo.oslc4j.core</groupId>
+			<artifactId>oslc4j-jena-provider</artifactId>
+			<version>${lyo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.lyo</groupId>
+			<artifactId>oslc-domains</artifactId>
+			<version>${lyo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.lyo.oslc4j.core</groupId>
+			<artifactId>oslc4j-json4j-provider</artifactId>
+			<version>${lyo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-jaxb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-jaxrs2-jakarta</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
