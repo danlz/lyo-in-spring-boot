@@ -19,7 +19,7 @@ import java.util.Set;
  *
  * @see Application
  */
-@OpenAPIDefinition(info = @Info(title = "OSLC Server1", version = "1.0.0"), servers = @Server(url = "/oslc/"))
+@OpenAPIDefinition(info = @Info(title = "OSLC Server", version = "1.0.0"), servers = @Server(url = "/oslc/"))
 public class JerseyApplication extends jakarta.ws.rs.core.Application {
 
     private final Set<Class<?>> resourceClasses = new HashSet<>();
